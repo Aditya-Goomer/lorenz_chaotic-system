@@ -83,58 +83,7 @@ Fixed-point arithmetic offers an efficient balance between numerical precision a
 
 ---
 
-## Hardware Architecture
 
-```
-                     Initial Parameters
-                  (σ, ρ, β, x, y, z)
-                           │
-                           ▼
-                +-----------------------+
-                | Lorenz Derivative     |
-                | Computation Module    |
-                +-----------+-----------+
-                            │
-                            ▼
-                +-----------------------+
-                | RK4 Integration Unit  |
-                +-----------+-----------+
-                            │
-                            ▼
-                +-----------------------+
-                | State Registers       |
-                +-----------+-----------+
-                            │
-                            └────────── Feedback
-```
-
----
-
-## Project Structure
-
-```
-Lorenz-Chaotic-System/
-│
-├── rtl/
-│   ├── lorenz_top.v
-│   ├── lorenz_deriv.v
-│   ├── rk4_integrator.v
-│   ├── mult_q16.v
-│   └── ...
-│
-├── tb/
-│   └── lorenz_tb.v
-│
-├── docs/
-│   ├── block_diagram.png
-│   ├── waveform.png
-│   └── simulation.png
-│
-├── README.md
-└── LICENSE
-```
-
----
 
 ## Simulation
 
